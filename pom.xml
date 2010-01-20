@@ -116,6 +116,22 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<includes>
+						<include>**/*Spec.class</include>
+					</includes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>villane.org/mavenrepo</id>
+			<name>http://villane.org/mavenrepo repository</name>
+			<url>scp://villane.org/home/villane/villane.org/mavenrepo</url>
+		</repository>
+	</distributionManagement>
 </project>
