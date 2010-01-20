@@ -1,0 +1,20 @@
+h2. PAW - simple Scala libraries for (web) applications 
+
+Copyright (c) 2010, Erkki Lindpere
+All rights reserved.
+
+This software is distributed under the Simplified BSD License. See the file License.txt for the full text.
+
+A "Maven repository":http://villane.org/mavenrepo/org/villane/shttpc/ at villane.org contains both sources and binaries. 
+
+h3. Usage examples (more coming soon)
+
+<pre><code>
+import org.villane.paw.security._
+
+object MyPermission extends SimplePermission
+
+SecurityContext mustHave MyPermission
+
+if (SecurityContext has MyPermission) ... else ...
+</code></pre>
