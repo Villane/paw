@@ -5,7 +5,7 @@ package org.villane.paw.security
  */
 trait TransitivePermission extends Permission {
   /** Override this method to change transitively implied Permissions. */ 
-  def impliedPermissions: List[Permission] = Nil
+  def impliedPermissions: Iterable[Permission] = Nil
 
   /** Override this method to change directly implied Permissions. */
   def impliesDirectly(that: Permission) = this == that 
